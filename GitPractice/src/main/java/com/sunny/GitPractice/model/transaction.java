@@ -1,21 +1,40 @@
 package com.sunny.GitPractice.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 import java.util.Objects;
 
+@Component
 public class transaction {
+
+    public void setBusiness(String business) {
+        this.business = business;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     private String business;
     private String desc;
     private double amount;
     private Date date;
 
-    public transaction(String business, String desc, double amount, Date date) {
+    /*public transaction(String business, String desc, double amount, Date date) {
         this.business = business;
         this.desc = desc;
         this.amount = amount;
         this.date = date;
-    }
+    }*/
 
     public String getBusiness() {
         return business;
